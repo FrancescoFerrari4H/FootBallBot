@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Risultati della ricerca</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Risultati della ricerca</h1>
+        <% if (venue) { %>
+            <div class="card my-3">
+                <div class="card-header">
+                    <h2><%= message %></h2>
+                </div>
+                <div class="card-body">
+                    <p>Nome: <%= venue.name %></p>
+                    <p>Indirizzo: <%= venue.address %></p>
+                    <p>Città: <%= venue.city %></p>
+                    <p>Capacità: <%= venue.capacity %></p>
+                    <p>Superficie: <%= venue.surface %></p>
+                    <% if (venue.image) { %>
+                        <p><a href="<%= venue.image %>">Visualizza immagine</a></p>
+                    <% } %>
+                </div>
+            </div>
+        <% } else { %>
+            <h2><%= message %></h2>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Risultati della Ricerca</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Risultati della Ricerca</h1>
+        <% if (league) { %>
+            <div class="card my-3">
+                <div class="card-header">
+                    <h2><%= league.league.name %></h2>
+                </div>
+                <div class="card-body">
+                    <% if (league.league.logo) { %>
+                        <img src="<%= league.league.logo %>" alt="<%= league.league.name %>" class="img-fluid mb-3">
+                    <% } %>
+                    <p>ID: <%= league.league.id %></p>
+                    <p>Tipo: <%= league.league.type %></p>
+                </div>
+            </div>
+        <% } else if (error) { %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } else { %>
+            <p>Nessuna lega trovata.</p>
+        <% } %>
+    </div>
+</body>
+</html>

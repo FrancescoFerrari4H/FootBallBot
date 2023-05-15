@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Risultati per i bookmakers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Risultati per i bookmakers</h1>
+        <ul class="list-group">
+            <% data.response.forEach(bookmaker => { %>
+                <li class="list-group-item"><%= bookmaker.name %></li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

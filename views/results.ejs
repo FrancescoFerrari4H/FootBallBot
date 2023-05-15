@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Risultati della ricerca</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Risultati della ricerca</h1>
+        <% if (results.length > 0) { %>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Giocatore</th>
+                        <th>Squadra</th>
+                        <th>Lega</th>
+                        <th>Gol</th>
+                        <th>Assist</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% results.forEach((item) => { %>
+                        <tr>
+                            <td><%= item.playerName %></td>
+                            <td><%= item.teamName %></td>
+                            <td><%= item.leagueName %></td>
+                            <td><%= item.goals %></td>
+                            <td><%= item.assists %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>Nessun risultato trovato.</p>
+        <% } %>
+    </div>
+</body>
+</html>

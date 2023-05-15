@@ -1,0 +1,7 @@
+    <h1>Classifica di <%= leagueName %></h1>
+    <img src="<%= leagueLogoUrl %>" alt="<%= leagueName %>">
+    <% if (table) { %>
+    <pre><%= table %></pre>
+    <% } else { %>
+    <p>Nessuna classifica trovata per <%= leagueName %></p>
+    <% } %>

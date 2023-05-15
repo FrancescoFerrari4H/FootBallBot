@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dettagli della squadra <%= team.name %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dettagli della squadra <%= team.name %></h1>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="<%= team.logo %>" alt="<%= team.name %>" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <ul class="list-group">
+                    <li class="list-group-item">Codice: <%= team.code %></li>
+                    <li class="list-group-item">Paese: <%= team.country %></li>
+                    <li class="list-group-item">Fondazione: <%= team.founded %></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
